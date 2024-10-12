@@ -1,12 +1,12 @@
 public class ComplexMatrix {
     private int rows, cols;
     private ComplexNumber[][] matrix;
-    public ComplexMatrix(int n, int m) {
-        this.rows = n;
-        this.cols = m;
-        this.matrix = new ComplexNumber[n][m];
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
+    public ComplexMatrix(int rows, int cols) {
+        this.rows = rows;
+        this.cols = cols;
+        this.matrix = new ComplexNumber[rows][cols];
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
                 matrix[i][j] = new ComplexNumber(0, 0);
             }
         }
@@ -126,7 +126,6 @@ public class ComplexMatrix {
 
         for (int i = 0; i < this.cols; i++) {
             for (int j = 0; j < this.rows; j++) {
-                ComplexNumber cofactorTransposed = new ComplexNumber(0, 0);
                 adjointMatrix.matrix[i][j] = cofactor(this.matrix, i, j);
             }
         }

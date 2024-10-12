@@ -1,22 +1,12 @@
 public class ComplexNumber {
     private double real;
     private double imaginary;
-    public ComplexNumber() {
-        imaginary = 0.0;
-        real = 0.0;
-    }
-    public ComplexNumber(double a) {
-        real = a;
-        imaginary = 0.0;
-    }
     public ComplexNumber(double real, double imaginary) {
         this.real = real;
         this.imaginary = imaginary;
     }
     public double getReal() { return real; }
     public double getImaginary() { return imaginary; }
-    public void setReal(double real) { this.real = real; }
-    public void setImaginary(double imaginary) { this.imaginary = imaginary; }
     public ComplexNumber add(ComplexNumber other) {
         return new ComplexNumber(this.real + other.real, this.imaginary + other.imaginary);
     }
